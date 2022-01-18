@@ -4,17 +4,9 @@ from setuptools import setup
 HERE = Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
-def get_requirements(req_file):
-    """
-    Extract requirements from provided file.
-    """
-    req_path = Path(req_file)
-    requirements = req_path.read_text().split("\n") if req_path.exists() else []
-    return requirements
-
 setup(
     name="bitcoin-rpc-client",
-    version="0.1.0",
+    version="0.1.2",
     keywords="bitcoin btc json-rpc rpc client",
     description="Bitcoin RPC Client",
     long_description=README,
@@ -35,5 +27,5 @@ setup(
     ],
     packages=["bitcoin_rpc_client"],
     include_package_data=True,
-    setup_requires=get_requirements("requirements.txt"),
+    install_requires=["httpx"],
 )
