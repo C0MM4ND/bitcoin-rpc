@@ -1,8 +1,6 @@
 from pathlib import Path
 from setuptools import setup
 
-import bitcoin_rpc
-
 HERE = Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
@@ -16,7 +14,7 @@ def get_requirements(req_file):
 
 setup(
     name="bitcoin-rpc",
-    version=bitcoin_rpc.__version__,
+    version="0.1.0",
     keywords="bitcoin btc json-rpc rpc client",
     description="Bitcoin RPC Client",
     long_description=README,
@@ -37,5 +35,5 @@ setup(
     ],
     packages=["bitcoin_rpc"],
     include_package_data=True,
-    install_requires=get_requirements("requirements.txt"),
+    setup_requires=get_requirements("requirements.txt"),
 )
