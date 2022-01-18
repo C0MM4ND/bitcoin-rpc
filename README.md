@@ -1,11 +1,11 @@
-# Bitcoin-RPC
+# Bitcoin RPC Client
 
 RPC client for Bitcoin Daemons
 
 ## Install
 
 ```bash
-pip install bitcoin-rpc
+pip install bitcoin-rpc-client
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ bitcoind -server -rpcuser=user -rpcpassword=pass
 ### Sync
 
 ```python
-from bitcoin_rpc import RPCClient
+from bitcoin_rpc_client import RPCClient
 
 with RPCClient('http://127.0.0.1:18443', 'user', 'pass') as rpc:
     blocks = rpc.generate(101)
@@ -37,7 +37,7 @@ rpc.close()
 ### Async
 
 ```python
-from bitcoin_rpc import RPCClientAsync
+from bitcoin_rpc_client import RPCClientAsync
 
 with RPCClientAsync('http://127.0.0.1:18443', 'user', 'pass') as rpc:
     blocks = await rpc.generate(101)

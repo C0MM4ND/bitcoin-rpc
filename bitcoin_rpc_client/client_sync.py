@@ -5,7 +5,7 @@ import json
 from functools import partial
 from urllib import request
 
-from bitcoin_rpc.error import JSONRPCError
+from .error import JSONRPCError
 
 
 class RPCClient(object):

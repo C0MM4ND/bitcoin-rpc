@@ -13,13 +13,13 @@ def get_requirements(req_file):
     return requirements
 
 setup(
-    name="bitcoin-rpc",
+    name="bitcoin-rpc-client",
     version="0.1.0",
     keywords="bitcoin btc json-rpc rpc client",
     description="Bitcoin RPC Client",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/c0mm4nd/bitcoin-rpc",
+    url="https://github.com/c0mm4nd/bitcoin-rpc-client",
     author="CommandM",
     author_email="maoxs2@gmail.com",
     license="MIT",
@@ -33,7 +33,7 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    packages=["bitcoin_rpc"],
+    packages=["bitcoin_rpc_client"],
     include_package_data=True,
     setup_requires=get_requirements("requirements.txt"),
 )

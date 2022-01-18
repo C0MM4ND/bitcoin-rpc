@@ -3,8 +3,9 @@ import logging
 import decimal
 import json
 from functools import partial
-from bitcoin_rpc.error import JSONRPCError
 import httpx
+
+from .error import JSONRPCError
 
 
 class RPCClientAsync(object):
@@ -20,7 +21,7 @@ class RPCClientAsync(object):
     async def __aenter__(self):
         return self
 
-    async def __aexit__(self,exc_type,exc_val,exc_tb):
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self._request.aclose()
 
     async def aclose(self):
